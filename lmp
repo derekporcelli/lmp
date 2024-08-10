@@ -41,9 +41,12 @@ def select_media(path, message=None):
     else:
         print('\033[92m' + '0.' + '\033[0m' +'\tExit')
     symbol_path = path.replace(MEDIA_PATH, ':-)')
+    choice = input(f'\033[95m[{symbol_path}] > \033[0m')
     try:
-        choice = int(input(f'\033[95m[{symbol_path}] > \033[0m'))
+        choice = int(choice)
     except ValueError:
+        if(choice == 'q'):
+            return
         select_media(path, '\033[93m' + 'Invalid input, try again' + '\033[0m')
         return
     except KeyboardInterrupt:
