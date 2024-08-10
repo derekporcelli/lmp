@@ -1,3 +1,5 @@
+# Maintainer(s): Derek Porcelli derekp5831@gmail.com
+
 pkgname=lmp
 pkgver=1.0.1
 pkgrel=1
