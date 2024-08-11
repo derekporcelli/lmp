@@ -21,7 +21,7 @@ def get_config():
 def select_media(path, message=START_MESSAGE):
     global MEDIA_PATH
     global MEDIA_PLAYER
-    subprocess.run(['clear'])
+    subprocess.run(['tput', 'reset'])
     previous_path = '/'.join(path.split('/')[:-1])
     if message:
         print(message)
@@ -30,7 +30,7 @@ def select_media(path, message=START_MESSAGE):
         media = subprocess.Popen([MEDIA_PLAYER, path], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         path = previous_path
         previous_path = '/'.join(path.split('/')[:-1])
-        subprocess.run(['clear'])
+        subprocess.run(['tput', 'reset'])
         print(START_MESSAGE)
     list_dir = os.listdir(path)
     list_dir.sort()
