@@ -18,7 +18,7 @@ def get_config():
     MEDIA_PLAYER = config.get('general', 'media_player')
 
 # Recursive cli selection
-def select_media(path, message=None):
+def select_media(path, message=START_MESSAGE):
     global MEDIA_PATH
     global MEDIA_PLAYER
     subprocess.run(['clear'])
@@ -63,7 +63,7 @@ def select_media(path, message=None):
 def main():
     global MEDIA_PATH
     get_config()
-    select_media(MEDIA_PATH, START_MESSAGE)
+    select_media(MEDIA_PATH)
 
 if __name__ == '__main__':
     main()
