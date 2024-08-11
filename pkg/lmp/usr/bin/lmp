@@ -47,7 +47,7 @@ def select_media(path, message=None):
     except ValueError:
         if(choice == 'q'):
             return
-        select_media(path, '\033[93m' + 'Invalid input, try again' + '\033[0m')
+        select_media(path, '\033[91m' + 'Invalid input, try again' + '\033[0m')
         return
     except KeyboardInterrupt:
         return
