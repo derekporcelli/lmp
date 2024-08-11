@@ -40,7 +40,7 @@ def select_media(path, message=None):
         print('\033[92m' + '0.' + '\033[0m' + '\tGo back')
     else:
         print('\033[92m' + '0.' + '\033[0m' +'\tExit')
-    symbol_path = path.replace(MEDIA_PATH, ':-)')
+    symbol_path = path.replace(MEDIA_PATH, '##')
     choice = input(f'\033[95m[{symbol_path}] > \033[0m')
     try:
         choice = int(choice)
