@@ -3,10 +3,10 @@
 pkgname = lmp
 pkgbase = lmp
 xdata = pkgtype=pkg
-pkgver = 1.0.5-1
+pkgver = 1.0.6-1
 pkgdesc = Lightweight media player
 url = https://github.com/derekporcelli/lmp
-builddate = 1723336867
+builddate = 1723339495
 packager = Unknown Packager
 size = 2176
 arch = x86_64
