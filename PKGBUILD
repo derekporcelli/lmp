@@ -3,7 +3,7 @@
 pkgname=lmp
 pkgver=1.0.8
 pkgrel=1
-pkgdesc="Lightweight media player"
+pkgdesc="A lightweight media player script"
 arch=('x86_64')
 url="https://github.com/derekporcelli/lmp"
 license=('GPL')
