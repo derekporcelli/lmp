@@ -5,6 +5,7 @@ A lightweight media player script
 The Lightweight Media Player is a CLI script that allows you to browse a media directory using an enumerated directory list. You can customize a number of things in this script including what media player is used to open your file. 
 
 ## Usage
+
 ### Running
 To initialize the script, run:
 ```bash
@@ -26,38 +27,12 @@ By default, the configuration file is stored in ```/etc/lmp/``` as ```lmp.conf``
 
 ### Arch-based Distros
 
-#### Using ```makepkg```
-1. Clone the repositiory by running:
+#### Using an AUR Helper
+To install the script, run:
 ```bash
-git clone https://github.com/derekporcelli/lmp.git
+yay -S lmp
 ```
 or
 ```bash
-git clone git@github.com:derekporcelli/lmp.git
+paru -S lmp
 ```
-2. Move into the directory by running:
-```bash
-cd lmp
-```
-3. Install the package by running:
-```bash
-makepkg -si
-``` 
-
-#### Using ```pacman```
-
-```bash
-git clone https://github.com/derekporcelli/lmp.git
-```
-or
-```bash
-git clone git@github.com:derekporcelli/lmp.git
-```
-2. Move into the directory by running:
-```bash
-cd lmp
-```
-3. Install the package by running:
-```bash
-pacman -U lmp-<version>-x86_64.pkg.tar.zst
-``` 
