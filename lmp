@@ -5,7 +5,7 @@ import subprocess
 import configparser
 
 CONFIG_PATH = '/etc/lmp/lmp.conf'
-MEDIA_PATH = '~/media'
+MEDIA_PATH = '$HOME/media'
 MEDIA_PLAYER = 'mpv'
 HOME_SYMBOL = '##'
 CHAR_CUTOFF = 10
@@ -22,12 +22,13 @@ def get_config():
     except:
         print('Could not read config file')
     try:
-        MEDIA_PATH = os.path.expandvars(config.get('general', 'media_path'))
+        MEDIA_PATH = config.get('general', 'media_path')
         MEDIA_PLAYER = config.get('general', 'media_player')
         HOME_SYMBOL = config.get('general', 'home_symbol')
         CHAR_CUTOFF = int(config.get('general', 'char_cutoff'))
     except:
         print('Could not get one or more options')
+    MEDIA_PATH = os.path.expandvars(MEDIA_PATH)
 
 # Recursive cli selection
 def select_media(path, message=START_MESSAGE):
